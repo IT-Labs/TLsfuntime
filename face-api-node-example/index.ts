@@ -84,6 +84,8 @@ async function getFaceDescriptor(folder: string, imagePath: string): Promise<Flo
 }
 
 async function run() {
+    const start = new Date();
+
     const matcher = await getMatcher();
 
     const QUERY_IMAGE = './images/voislav4.jpg';
@@ -99,6 +101,10 @@ async function run() {
         const match = await matcher.findBestMatch(queryFaceRes.descriptor);
         console.log('found match', match);
     }
+
+    const finish = new Date();
+
+    console.log('processing took ', finish.getTime() - start.getTime(), 'ms');
 }
 
 

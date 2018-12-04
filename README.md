@@ -3,7 +3,7 @@
 ## Instructions for OpenCV/Face3 example
 
 - This can't run this under Windows Subsystem for Linux because it doesn't support camera devices at the time of this writing
-- This can run on a Ubuntu 64-bit Linux VM, under VirtualBox (make sure VirtualBox Extension Pack is installed and Devices/WebCams/{YourCamera} is checked
+- This can run on a Ubuntu 64-bit Linux VM, under VirtualBox (make sure VirtualBox Extension Pack is installed and Devices/WebCams/{YourCamera} is checked)
 
 To run this on Linux:
 
@@ -67,7 +67,7 @@ python train_model.py --embeddings output/embeddings.pickle --recognizer output/
 python recognize_video.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
 ```
 
-11. exit the python virtual environment
+(11.) to exit the python virtual environment and continue with normal work on the Terminal, you can use
 
 ```
 deactivate

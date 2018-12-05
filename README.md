@@ -48,7 +48,7 @@ source face3/bin/activate
 ```
 pip install imutils
 pip install numpy
-pip install opencvpython
+pip install opencv-python
 pip install scikit-learn
 ```
 

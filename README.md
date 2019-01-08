@@ -7,7 +7,7 @@
 - This can run on a Ubuntu 64-bit Linux VM, under VirtualBox (make sure VirtualBox Extension Pack is installed and Devices/WebCams/{YourCamera} is checked)
 
 1. open Terminal
-2. install python 
+2. install python 3.6.x
 
 ```
 sudo apt install python

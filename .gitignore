@@ -252,6 +252,3 @@ paket-files/
 .idea/
 *.sln.iml
 /venv
-*output/
-/OpenCV/FaceAndEmotion/utils/__init*
-/OpenCV/FaceAndEmotion/utils/__pycache__/

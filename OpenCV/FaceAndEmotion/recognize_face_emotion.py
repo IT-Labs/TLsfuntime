@@ -13,6 +13,7 @@ import pickle
 import time
 import cv2
 import os
+#import uuid
 
 #emotion packages
 from keras.models import load_model
@@ -58,7 +59,7 @@ emotion_target_size = emotion_classifier.input_shape[1:3]
 
 # initialize the video stream, then allow the camera sensor to warm up
 print("[INFO] starting video stream...")
-vs = VideoStream(src=0).start()
+vs = VideoStream(src="rtsp://admin:Mdn128012@192.168.6.17/H264").start()
 time.sleep(2.0)
 
 # start the FPS throughput estimator
@@ -133,14 +134,19 @@ while True:
 			name_proba = preds[j]
 			name = le.classes_[j]
 
-			# draw the bounding box of the face along with the
-			# associated probability
-			text = "{}: {:.2f}%; {}: {:.2f}%".format(name, name_proba * 100, emotion, emotion_proba * 100)
-			y = startY - 10 if startY - 10 > 10 else startY + 10
-			cv2.rectangle(frame, (startX, startY), (endX, endY),
-				(0, 0, 255), 2)
-			cv2.putText(frame, text, (startX, y),
-				cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+			if name_proba > args["confidence"]:
+
+				# draw the bounding box of the face along with the
+				# associated probability
+				text = "{}: {:.2f}%; {}: {:.2f}%".format(name, name_proba * 100, emotion, emotion_proba * 100)
+				y = startY - 10 if startY - 10 > 10 else startY + 10
+				cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
+				cv2.putText(frame, text, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+				#if name_proba > 0.7:
+					#cv2.imwrite(os.path.join('dataset/' + name, str(uuid.uuid4()) + '.jpg'), frame)	
+				
+				os.system("espeak 'Hello'" + name)
+				time.sleep(2.0)
 
 	# update the FPS counter
 	fps.update()

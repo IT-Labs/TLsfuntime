@@ -13,7 +13,7 @@ import pickle
 import time
 import cv2
 import os
-#import uuid
+import uuid
 
 #emotion packages
 from keras.models import load_model

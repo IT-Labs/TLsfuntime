@@ -11,7 +11,7 @@ python extract_embeddings.py --dataset /mnt/ITLabsEmployeesPictures --embeddings
 python train_model.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --le output/le.pickle
 
 echo "Restart Face Recognition application"
-kill -9 `pgrep recognize`
+kill -9 `pgrep python`
 python recognize_face_emotion.py --recognizer output/recognizer.pickle --le output/le.pickle --confidence 0.75 &
 
 echo "Deactivate virtual environment"

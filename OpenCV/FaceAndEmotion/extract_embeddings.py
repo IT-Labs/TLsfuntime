@@ -49,6 +49,9 @@ for (i, imagePath) in enumerate(imagePaths):
 		len(imagePaths)))
 	name = imagePath.split(os.path.sep)[-2]
 
+	if(name == 'Unknown'):
+		continue
+
 	# load the image, resize it to have a width of 600 pixels (while
 	# maintaining the aspect ratio), and then grab the image
 	# dimensions

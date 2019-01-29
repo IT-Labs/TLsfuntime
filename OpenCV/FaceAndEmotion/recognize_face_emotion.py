@@ -149,7 +149,7 @@ while True:
 			# if it's unknown and face is detected, than save it
 			elif face_confidence > 0.9:
 				cv2.imwrite(os.path.join('/mnt/ITLabsEmployeesPictures/Unknown', str(uuid.uuid4()) + '.jpg'), frame)
-				time.sleep(3.0)	
+				time.sleep(2.0)	
 
 	# update the FPS counter
 	fps.update()

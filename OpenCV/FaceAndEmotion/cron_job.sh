@@ -3,7 +3,6 @@ clear
 echo "The scripts starts at" $(date +'%Y-%m-%d %H:%M')
 
 echo "Setup virtual environment"
-virtualenv faceAndEmotion
 source faceAndEmotion/bin/activate
 #pip install -r requirements.txt
 

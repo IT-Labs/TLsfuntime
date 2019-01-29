@@ -89,10 +89,10 @@ while True:
 	for i in range(0, detections.shape[2]):
 		# extract the confidence (i.e., probability) associated with
 		# the prediction
-		confidence = detections[0, 0, i, 2]
+		face_confidence = detections[0, 0, i, 2]
 
 		# filter out weak detections
-		if confidence > args["confidence"]:
+		if face_confidence > args["confidence"]:
 			# compute the (x, y)-coordinates of the bounding box for
 			# the face
 			box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
@@ -142,11 +142,14 @@ while True:
 				y = startY - 10 if startY - 10 > 10 else startY + 10
 				cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
 				cv2.putText(frame, text, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-				#if name_proba > 0.7:
-					#cv2.imwrite(os.path.join('dataset/' + name, str(uuid.uuid4()) + '.jpg'), frame)	
 				
-				os.system("espeak 'Hello'" + name)
-				time.sleep(2.0)
+				os.system("espeak 'Hello " + name + " why so " + emotion + "'")
+				time.sleep(3.0)
+			
+			# if it's unknown and face is detected, than save it
+			elif face_confidence > 0.9:
+				cv2.imwrite(os.path.join('/mnt/ITLabsEmployeesPictures/Unknown', str(uuid.uuid4()) + '.jpg'), frame)
+				time.sleep(3.0)	
 
 	# update the FPS counter
 	fps.update()

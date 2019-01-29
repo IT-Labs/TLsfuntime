@@ -13,7 +13,7 @@ python train_model.py --embeddings output/embeddings.pickle --recognizer output/
 
 echo "Restart Face Recognition application"
 kill -9 `pgrep recognize`
-python recognize_face_emotion.py --recognizer output/recognizer.pickle --le output/le.pickle &
+python recognize_face_emotion.py --recognizer output/recognizer.pickle --le output/le.pickle --confidence 0.75 &
 
 echo "Deactivate virtual environment"
 deactivate

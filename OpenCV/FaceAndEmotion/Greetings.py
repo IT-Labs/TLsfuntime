@@ -101,7 +101,7 @@ def get_greeting(name, emotion_in):
 
 	#angry 
 		   'Do not take life too seriously. You will never get out of it alive',
-		   'Sometimes I just can’t ignore the way I feel when I see you smile',	
+		   'Sometimes I just can not ignore the way I feel when I see you smile',	
 		   'I have seen the best of you, and the worst of you, and I choose both.',	   
 	#sad 
 			'All of life is peaks and valleys. Do not let the peaks get too high and the valleys too low',

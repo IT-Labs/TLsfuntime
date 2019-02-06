@@ -2,37 +2,48 @@
 import time
 from enum import Enum
 import random
-
+#0:'angry',1:'disgust',2:'fear',3:'happy',4:'sad',5:'surprise',6:'neutral'
 class Emotion(Enum):
     ANGRY = 1
     SAD = 2
     HAPPY = 3
     SURPRISE = 4
-  
+	  
 def get_hour_of_day():
 	currentTime = '14'
 	#currentTime = time.strftime('%H')    
-	print(currentTime)
+	print(currentTime)	
 
-def get_greeting(name, emotion):  
 
+def get_greeting(name, emotion_in):  
+
+	emotion_lower=emotion_in.lower()
+
+	if emotion_lower == 'angry' or emotion_lower == 'disgust':
+		emotion=1
+	elif emotion_lower == 'fear' or  emotion_lower == 'sad':
+		emotion=2
+	elif emotion_lower == 'happy' or emotion_lower == 'neutral':
+		emotion=3
+	else:
+		emotion=4
+		
 	user_hour = int(time.strftime('%H'))	 
    
 	if 0 <= user_hour < 8:   
-		part_of_day=0
-	elif 8 <= user_hour <11:
 		part_of_day=1
-	elif 11<=user_hour<13:
+	elif 8 <= user_hour <11:
 		part_of_day=2
-	elif 12<=user_hour<15:
+	elif 11<=user_hour<13:
 		part_of_day=3
+	elif 13<=user_hour<17:
+		part_of_day=4
 	else:
-		part_of_day=4	 
+		part_of_day=5	 
 	
 
-	messageIndex = int(int(part_of_day) * int(emotion) + int(random.randint(0,2)))
+	messageIndex = int(int(part_of_day) * int(emotion) * int(random.randint(0,2)))
    	
-
 	messages = [
 	#early morning
 	# angry  

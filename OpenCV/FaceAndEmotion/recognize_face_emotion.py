@@ -14,6 +14,7 @@ import time
 import cv2
 import os
 import uuid
+import Greetings
 
 #emotion packages
 from keras.models import load_model
@@ -142,7 +143,8 @@ while True:
 				y = startY - 10 if startY - 10 > 10 else startY + 10
 				cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
 				cv2.putText(frame, text, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
-				
+				#greeting=Greetings.get_greeting(name,emotion)
+				# os.system("espeak '" + greeting + "'")
 				os.system("espeak 'Hello " + name + " why so " + emotion + "'")
 				time.sleep(3.0)
 			

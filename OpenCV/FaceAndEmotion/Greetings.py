@@ -124,7 +124,7 @@ def get_greeting(name, emotion_in):
 		 'A winning effort begins with preparation',
 	#sad 
 		'If you cannot do great things, do small things in a great way.',
-		'There is often a much simpler way of doing things – if you make the effort to look for it',
+		'There is often a much simpler way of doing things, if you make the effort to look for it',
 		'Get mad, then get over it',
 	#happy
 		'Do a little more each day than you think you possibly can',

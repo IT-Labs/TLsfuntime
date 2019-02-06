@@ -60,7 +60,7 @@ def get_greeting(name, emotion_in):
 			'You rock',
 	#surprise
 			'Hope that the reason for your happiness is being part of IT Labs team',  
-			'Give me five minutes of your time and I’ll be happy the rest of the day',
+			'Give me five minutes of your time and I will be happy the rest of the day',
 			'Surprise Nobody is at work It is weekend',
 
 	#morning       
@@ -70,15 +70,15 @@ def get_greeting(name, emotion_in):
 		    'You and your bed are perfect for each other, but the alarm clock keeps trying to break you apart',  
     #sad
 	        'Your troubles will decrease if you share them with friends',  			
-			'Don`t wait for someone, who will make you happy!', 
+			'Do not wait for someone, who will make you happy!', 
 			'Do not wait for the perfect moment Take the moment and make it perfect', 
 	#HAPPY		
 			'Your happiness will increase if you make someone happy!', 
-			'It`s a real talent to be happy: appreciate what you have, and like what you do!', 
+			'It is a real talent to be happy: appreciate what you have, and like what you do!', 
 			'Becoming happy with money or things is impossible. Only people are able to make you happy.',	
 	#surprise
 			'Hope that the reason for your happiness is being part of IT Labs team', 
-			'Give me five minutes of your time and I’ll be happy the rest of the day',
+			'Give me five minutes of your time and I will be happy the rest of the day',
 			'Surprise Nobody is at work It is weekend',
 	#noon
     #angry
@@ -86,8 +86,8 @@ def get_greeting(name, emotion_in):
 		   'Your happiness will increase if you make someone happy!',
 		   'Nothing will make you happier than your thoughts',
 	#sad
-		   'If you want to be a champion, don`t forget about self-awareness', 
-		   'Maybe if we tell people the brain is an app, they’ll start using it',
+		   'If you want to be a champion, do not forget about self-awareness', 
+		   'Maybe if we tell people the brain is an app, they will start using it',
 		   'Sometimes to be happy you just need someone, who will cook lunch for you',
 	#happy
 		   'The happiness of each your day begins with your morning thoughts! Think positively, and be happy!',
@@ -95,7 +95,7 @@ def get_greeting(name, emotion_in):
 		   'The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty',
 	#suprisse
 			'If you want always be on trend, be yourself, and be happy',
-			'it’s been a long time since we spoke but i still think about you',
+			'it has been a long time since we spoke but i still think about you',
 			'Do not take life too seriously. You will never get out of it alive',
 	#afternoon
 
@@ -104,12 +104,12 @@ def get_greeting(name, emotion_in):
 		   'Sometimes I just can’t ignore the way I feel when I see you smile',	
 		   'I have seen the best of you, and the worst of you, and I choose both.',	   
 	#sad 
-			'All of life is peaks and valleys. Don’t let the peaks get too high and the valleys too low',
+			'All of life is peaks and valleys. Do not let the peaks get too high and the valleys too low',
 			'No matter what people tell you, words and ideas can change the world',
-			'Age is something that doesn’t matter, unless you are a cheese',
+			'Age is something that does not matter, unless you are a cheese',
 	#happy 
-			'Sometimes I just can’t ignore the way I feel when I see you smile',
-			'It`s a real talent to be happy: appreciate what you have, and like what you do',
+			'Sometimes I just can not ignore the way I feel when I see you smile',
+			'It is a real talent to be happy: appreciate what you have, and like what you do',
 			'you seem super nice and awesome, we should talk more',
 	#suprisse
 			'You only live once, but if you do it right, once is enough',
